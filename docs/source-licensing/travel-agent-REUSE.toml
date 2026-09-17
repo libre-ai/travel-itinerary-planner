@@ -1,0 +1,21 @@
+version = 1
+
+# Dual licence by artefact nature (README.md "Licences"): everything in this
+# repository is Apache-2.0 by default — reasoning, tooling, docs, specs, CI —
+# except the city-fact database under data/, which is ODbL-1.0. The two root
+# licence files (LICENSE, data/LICENSE) are the human-readable copies; this
+# file is what `reuse lint` resolves per file.
+[[annotations]]
+path = "**"
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+# data/ is a factual database (city packs): ODbL-1.0, distinct from the code
+# that reasons over it. More specific than the "**" default above, so it wins
+# under precedence = "closest".
+[[annotations]]
+path = "data/**"
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "ODbL-1.0"

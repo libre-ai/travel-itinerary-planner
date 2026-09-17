@@ -15,6 +15,6 @@ Préparer un voyage à partir d’informations dont vous pouvez retrouver la sou
 
 Les itinéraires visés n’incluent ni réservation ni paiement.
 
-**Aujourd’hui :** ce dépôt présente le projet sous forme de documentation ; aucune application n’est encore disponible.
+**Aujourd’hui :** ce dépôt contient des données de référence, une conception et des contrôles d’isolation ; l’application de planification reste à construire.
 
 [Catalogue](https://github.com/libre-ai/.github/blob/main/profile/README.fr.md) · [Contribuer](https://github.com/libre-ai/.github/blob/main/CONTRIBUTING.md) · [English](README.md) · [Licence CC BY 4.0](LICENSES/CC-BY-4.0.txt)

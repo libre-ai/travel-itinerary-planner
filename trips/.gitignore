@@ -1,0 +1,12 @@
+# A trip instance is personal data of an unusual kind: a stay window discloses
+# when a home stands empty, and a lodging discloses where its occupant is. Both
+# are published in advance, attached to a real identity, and useful to exactly
+# the wrong people.
+#
+# Nothing here is tracked except the fictional demo used as the public
+# end-to-end fixture, and this directory's own scaffolding.
+
+*
+!.gitignore
+!README.md
+!demo-*.yaml

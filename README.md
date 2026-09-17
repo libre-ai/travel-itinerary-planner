@@ -15,6 +15,6 @@ Prepare a trip using destination information you can trace to its source. This p
 
 The intended itineraries do not include reservations or payments.
 
-**Today:** this repository documents the proposed product; no usable application is available here yet.
+**Today:** the repository contains reference data, a design and trip-isolation checks; it does not yet contain an itinerary application.
 
 [Catalogue](https://github.com/libre-ai/.github/blob/main/profile/README.md) · [Contribute](https://github.com/libre-ai/.github/blob/main/CONTRIBUTING.md) · [Français](README.fr.md) · [CC BY 4.0 license](LICENSES/CC-BY-4.0.txt)

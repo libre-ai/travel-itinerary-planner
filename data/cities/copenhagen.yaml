@@ -1,0 +1,237 @@
+# Copenhagen city pack — first use case for the itinerary agent.
+#
+# Contract: this file holds FACTS ONLY. No planning logic, no prose advice.
+# The reasoning lives in prompts/system.md and must stay city-agnostic.
+#
+# Every entry carries `verified_on` + `source`. Entries marked `verified: false`
+# are placeholders the agent must treat as UNVERIFIED (system prompt §10) —
+# they are structure, not knowledge.
+
+slug: copenhagen
+name: { en: Copenhagen, da: København, fr: Copenhague }
+country: DK
+pack_verified_on: 2026-08-07
+
+currency:
+  local: DKK
+  # DKK is pegged to EUR under ERM II, so this rate is unusually stable.
+  rate_to_eur: 7.46
+  as_of: 2026-08-07
+  verified: true
+
+# ---------------------------------------------------------------------------
+# CALENDAR — read by system prompt §3 to partition a stay into acts.
+#
+# Coverage is deliberately year-round (AGENTS.md, trips/README.md): a pack
+# calendar listing only the events overlapping one stay is itself a
+# disclosure — the calendar IS the signature. These entries were added
+# 2026-08-18 specifically to break an August-only cluster left by the first
+# two entries; do not narrow this list back down to a single season.
+# ---------------------------------------------------------------------------
+calendar:
+  - id: cph-dox-2026
+    name: "CPH:DOX — Copenhagen International Documentary Film Festival"
+    start: 2026-03-11
+    end: 2026-03-22
+    structuring: true
+    effects:
+      street_closures: false # cinema screenings across venues, not a street event
+      city_wide_programme: true # 200+ films across many Copenhagen venues
+    source: https://cphdox.dk/programme-2026/
+    verified_on: 2026-08-18
+    verified: true
+
+  - id: copenhagen-distortion-2026
+    name: Copenhagen Distortion
+    start: 2026-06-03
+    end: 2026-06-07
+    structuring: true
+    effects:
+      street_closures: true # neighbourhood street parties (Nørrebro, Vesterbro, harbour)
+      free_programme: true # street parties are free; Distortion Ø (Refshaleøen) is ticketed
+      city_wide_programme: true
+    source: https://www.cphdistortion.dk/schedule
+    verified_on: 2026-08-18
+    verified: true
+
+  - id: copenhagen-jazz-festival-2026
+    name: Copenhagen Jazz Festival
+    start: 2026-07-03
+    end: 2026-07-12
+    structuring: true
+    effects:
+      street_closures: false
+      free_programme: true # most of the ~850 concerts are free admission
+      city_wide_programme: true
+    source: https://jazz.dk/en/copenhagen-jazz-festival-2026/frontpage/
+    verified_on: 2026-08-18
+    verified: true
+
+  - id: copenhagen-pride-2026
+    name: Copenhagen Pride Week
+    start: 2026-08-08
+    end: 2026-08-16
+    peak_day: 2026-08-15 # Parade
+    attendance_estimate: 250000
+    structuring: true
+    effects:
+      street_closures: true # Parade route + Rådhuspladsen as "Pride Square"
+      accommodation_price_peak: true
+      transit_disruption: partial
+      free_programme: true # 100+ free events across the week
+    districts_affected: [indre-by]
+    source: https://www.copenhagenpride.dk/en/pride-2026/
+    verified_on: 2026-08-07
+    verified: true
+
+  - id: copenhagen-cooking-2026
+    name: Copenhagen Cooking & Food Festival
+    start: 2026-08-21
+    end: 2026-08-30
+    structuring: true
+    theme_2026: apple
+    guest_region_2026: Istria
+    effects:
+      street_closures: false
+      accommodation_price_peak: false
+      city_wide_programme: true
+    source: https://www.visitcopenhagen.com/copenhagen/planning/copenhagen-cooking-gdk419149
+    verified_on: 2026-08-07
+    verified: true
+
+  - id: kulturnatten-2026
+    name: Kulturnatten (Copenhagen Culture Night)
+    start: 2026-10-09
+    end: 2026-10-09
+    peak_day: 2026-10-09
+    structuring: true
+    effects:
+      street_closures: false
+      free_programme: false # paid Culture Night Pass (125 DKK), children under 12 free
+      city_wide_programme: true # 250+ venues, 500+ museums/ministries/hidden buildings open 18:00-24:00
+    source: https://kulturnatten.dk/en/
+    verified_on: 2026-08-18
+    verified: true
+
+  - id: tivoli-christmas-2026
+    name: Christmas Season at Tivoli Gardens
+    start: 2026-11-14 # candidate: official sources gave 13, 14 and "mid-November" inconsistently for 2026
+    end: 2027-01-05 # candidate: same inconsistency; 2027-01-03 also seen
+    structuring: false # single-venue seasonal opening, not a city-wide event
+    effects:
+      street_closures: false
+      accommodation_price_peak: true # December high season, not independently sourced
+    # TODO(verify): tivoli.dk served the 2025 Christmas opening date (14 Nov)
+    # on one crawl and conflicting 2026 windows (13 Nov/3 Jan vs 15 Nov/5 Jan)
+    # on another — the site had not settled on its 2026 Christmas dates as of
+    # this verification pass. Re-read tivoli.dk/en/opening-hours-and-seasons
+    # closer to the season and flip verified: true once a single date is
+    # confirmed directly on an official page for 2026 specifically.
+    source: https://www.tivoli.dk/en/opening-hours-and-seasons
+    verified_on: 2026-08-18
+    verified: false
+
+# ---------------------------------------------------------------------------
+# CITY PASS — consumed by system prompt §4 (window placement).
+# ---------------------------------------------------------------------------
+city_pass:
+  - id: copenhagen-card-discover
+    name: Copenhagen Card — Discover
+    max_duration_hours: 120 # HARD CAP. Cannot cover a stay longer than 5 days.
+    transit_zones: 1-99 # Includes airport, Roskilde, Helsingør
+    attractions_covered: 80
+    children_included: 2 # under 12, per adult card
+    tiers:
+      - { hours: 24, price_dkk: 589 }
+      - { hours: 48, price_dkk: 859 }
+      - { hours: 72, price_dkk: 1039 }
+      - { hours: 96, price_dkk: 1219 }
+      - { hours: 120, price_dkk: 1419 }
+    source: https://thecopenhagencard.com/price/
+    verified_on: 2026-08-07
+    verified: true
+
+# ---------------------------------------------------------------------------
+# TRANSIT — note the deprecation block, read by system prompt §5.
+# ---------------------------------------------------------------------------
+transit:
+  metro: { driverless: true, service: 24/7 }
+
+  tickets:
+    - { id: city-pass-24h, price_dkk: 100, zones: 1-4, verified: true }
+    - { id: city-pass-72h, price_dkk: 270, zones: 1-4, verified: true }
+  tickets_source: https://www.publictransport.dk/tickets/citypass
+  tickets_verified_on: 2026-08-07
+
+  deprecations:
+    # Most travel guidance still recommends Rejsekort for long stays.
+    # It is withdrawn before the 2026 high season — do not recommend it.
+    - product: Rejsekort (physical card)
+      last_travel_day: 2026-05-28
+      replaced_by: Rejsebillet app (formerly DOT Billetter)
+      source: https://denmarkguide.dk/en/oplev-danmark/transport-og-mobilitet/offentlig-transport/rejsekort-rejsebillet-dsb-app/
+      verified_on: 2026-08-07
+      verified: true
+
+  cycling:
+    city_character: primary # Copenhagen is a cycling city; §5 applies strongly
+    schemes: [Donkey Republic, Bycyklen]
+    # TODO(pricing): weekly/monthly rental rates from classic shops not yet
+    # verified. Required before any 10+ night mobility recommendation, since
+    # §5 claims long stays favour rental over per-ride — that must be computed,
+    # not asserted.
+    long_term_rental_dkk_per_week: null
+    verified: false
+
+# ---------------------------------------------------------------------------
+# DISTRICTS
+# ---------------------------------------------------------------------------
+districts:
+  - { id: indre-by, name: Indre By, character: historic core }
+  - { id: vesterbro, name: Vesterbro, character: nightlife, Meatpacking }
+  - { id: norrebro, name: Nørrebro, character: multicultural, design }
+  - { id: christianshavn, name: Christianshavn, character: canals, Christiania }
+  - { id: osterbro, name: Østerbro, character: quiet, residential }
+  - { id: amager-orestad, name: Amager / Ørestad, character: contemporary architecture, beaches }
+  - { id: nordhavn, name: Nordhavn, character: new waterfront }
+  - { id: frederiksberg, name: Frederiksberg, character: parks, bourgeois }
+
+# ---------------------------------------------------------------------------
+# ATTRACTIONS — deliberately left as a stub.
+# ---------------------------------------------------------------------------
+# The §4 window optimiser needs, per entry: id, district, walk_up_price_dkk,
+# covered_by_pass, opening_days, indoor (bool), typical_duration_minutes.
+# Curated by hand from official sources for the first city: an Overpass/Wikidata
+# pipeline costs more than the ~30 entries it would produce and only amortises
+# from the third city on (phases §7). Nothing here is verified, so the agent
+# must not price a plan yet.
+attractions: []
+
+closure_patterns:
+  # Several major museums close on Mondays. Any stay spanning more than a week
+  # contains at least one, so this materially shapes those days.
+  # TODO(verify): confirm per-venue hours before use — museum schedules change
+  # yearly and a wrong opening time costs a morning (§10).
+  monday_closures_common: true
+  verified: false
+
+# ---------------------------------------------------------------------------
+# EXCURSIONS — durations are door-to-door from the central station.
+# ---------------------------------------------------------------------------
+# TODO(verify): all durations below are approximate and MUST be confirmed
+# against official operator timetables before appearing in an itinerary — not
+# against Rejseplanen, which §5 rules out as a structural dependency. Listed
+# here so the radius parameter (§7) has a candidate set to reason over.
+excursions:
+  - { id: roskilde, minutes: 25, note: Viking ships, cathedral, verified: false }
+  - { id: louisiana-humlebaek, minutes: 36, note: modern art museum, verified: false }
+  - { id: malmo-sweden, minutes: 35, note: different country and currency, verified: false }
+  - { id: helsingor-kronborg, minutes: 45, note: Kronborg castle, verified: false }
+  - { id: mons-klint, minutes: 120, note: chalk cliffs, requires bus leg, verified: false }
+  - { id: bornholm, minutes: 180, note: Baltic island — warrants 2-3 nights, not a day trip, verified: false }
+
+# ---------------------------------------------------------------------------
+# FOOD — categories the agent should cover at least once per stay.
+# ---------------------------------------------------------------------------
+food_signatures:
+  [smørrebrød, pølsevogn, kanelsnegl, food hall, new nordic]

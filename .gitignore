@@ -1,0 +1,12 @@
+node_modules/
+*.tsbuildinfo
+.DS_Store
+
+# Local agent settings — machine-specific, never shared.
+.claude/settings.local.json
+
+# Local code-recovery verification outputs.
+node_modules/
+coverage/
+playwright-report/
+test-results/

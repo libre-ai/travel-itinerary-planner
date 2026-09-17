@@ -1,0 +1,266 @@
+{
+  "schemaVersion": "code-recovery.v1",
+  "files": [
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": ".gitignore",
+      "sourceBlob": "a1fee60272afddb8469b6ea8aeba79cd6d1ab131",
+      "destinationPath": ".gitignore",
+      "sha256": "1f05cd60e545c721524d69f4c73a13b16088a20852829b13ddc392a68951611e"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "LICENSE",
+      "sourceBlob": "137069b823873b8bcf42979bcf8e9371052d26a2",
+      "destinationPath": "LICENSE",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "LICENSES/Apache-2.0.txt",
+      "sourceBlob": "137069b823873b8bcf42979bcf8e9371052d26a2",
+      "destinationPath": "LICENSES/Apache-2.0.txt",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "LICENSES/ODbL-1.0.txt",
+      "sourceBlob": "8ca51c358d59596c271ee7c928e5feb0d4d9b817",
+      "destinationPath": "LICENSES/ODbL-1.0.txt",
+      "sha256": "77d2692c3d64efdd4db18dce2407699baf62930e2b50d6e5ed90b48acf16b7c1"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "REUSE.toml",
+      "sourceBlob": "2eb050b0b6c85a3151eb1e8d88928e60208ec4ea",
+      "destinationPath": "REUSE.toml",
+      "sha256": "371d0a6ee93666353dda2d6528b25c552ea04a31f76cd14a5eb847f629f71dba"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "biome.json",
+      "sourceBlob": "114f6943f9a9009a1121c9d4d0f0269ea12fdd0d",
+      "destinationPath": "biome.json",
+      "sha256": "b001b8f433353db61570863e970d10f5452bd75af02eaab6a773528aaa978de3"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "bun.lock",
+      "sourceBlob": "ddfb60528b30d711f9eecd6d71c643f0a85d67ff",
+      "destinationPath": "bun.lock",
+      "sha256": "329feb2092582f271fb0b291d3cfeacb6bebea75fc728cdb79d3e09f8aab1917"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "data/LICENSE",
+      "sourceBlob": "8ca51c358d59596c271ee7c928e5feb0d4d9b817",
+      "destinationPath": "data/LICENSE",
+      "sha256": "77d2692c3d64efdd4db18dce2407699baf62930e2b50d6e5ed90b48acf16b7c1"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "data/cities/copenhagen.yaml",
+      "sourceBlob": "e1d350f9fa993be40cc4de17ecf33f36beacc4ed",
+      "destinationPath": "data/cities/copenhagen.yaml",
+      "sha256": "2b92fb1c4ff4036ce6ea7e181813d6125ceae370bca84651aed5f1e8bf7a0ff0"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "docs/adr/0001-three-strata-trip-isolation.md",
+      "sourceBlob": "8e1f96ab52d4d00012232df95b0addc4fd6072a6",
+      "destinationPath": "docs/adr/0001-three-strata-trip-isolation.md",
+      "sha256": "a853c7030c5347f7a02d82f9e01b4a9de6ddd623a2cafe706e5db5dd1e965316"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "docs/adr/0002-agent-surface-threat-model.md",
+      "sourceBlob": "83a2e2e96fa02b4e60f8d5f6aa9b60728eaabe05",
+      "destinationPath": "docs/adr/0002-agent-surface-threat-model.md",
+      "sha256": "4bf4b59881006f2d4d88d3d1f810e0306b38b558e9693ddbccb7721c846fe3df"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "docs/evidence/2026-08-18-sealed-repo.md",
+      "sourceBlob": "3a89cc7fb9728fa9c71b0a6d300be6040e3a113e",
+      "destinationPath": "docs/evidence/2026-08-18-sealed-repo.md",
+      "sha256": "a5869c7cdec043571f55e0becd6f2453b1ff7538c17fba872663d60b0435c3b3"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "docs/specs/2026-08-07-travel-agent-design.md",
+      "sourceBlob": "d1c9cb75d9fe10b8698d87ed1f01df692dd6338b",
+      "destinationPath": "docs/specs/2026-08-07-travel-agent-design.md",
+      "sha256": "ea8e4c2ec2c9e7c0187e02f86590df3027409a917e301ebead41de68fc17987d"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "docs/specs/2026-08-07-travel-agent-phases.md",
+      "sourceBlob": "d7c14f33ca5751b1239e88b3e45370d1ceafa542",
+      "destinationPath": "docs/specs/2026-08-07-travel-agent-phases.md",
+      "sha256": "eeaf50add498cc7a239488a22df09ed038d2d73c59a3c5959d0bf7239459182b"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "package.json",
+      "sourceBlob": "8d14dba9d03c9835aebc26eb42f05f589b36ee11",
+      "destinationPath": "package.json",
+      "sha256": "5c9ea9091a658f3979c2b101c49e32d6f8b2c809407913f849cbfa3513f06557"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "prompts/system.md",
+      "sourceBlob": "cf777472aadc3f87e3e750e4fc1ce56e3f2e65b4",
+      "destinationPath": "prompts/system.md",
+      "sha256": "14ed00c63baf50e0b09a2b315e145a6afd9e1c8804c6f2b39e309519e7dd667b"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "tests/trip-isolation.test.ts",
+      "sourceBlob": "9347ac87ad6450daafdf03f49819e83ed41aac50",
+      "destinationPath": "tests/trip-isolation.test.ts",
+      "sha256": "498be6da9fb09eca7bb57025adc8db5bdb3c6a7b76b7f832fc09545007c3e73f"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "tools/ci/check-project-card.ts",
+      "sourceBlob": "a720d786ec5d32913c00375fecea92c7441412c0",
+      "destinationPath": "tools/ci/check-project-card.ts",
+      "sha256": "6b7a87fce002966573b62a3913849805cb21554d4d5e38aedd7a9727997c6d4b"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "tools/ci/check-trip-isolation.ts",
+      "sourceBlob": "3bced2df3ce1ef07e540c385fe12670fa27ab3dc",
+      "destinationPath": "tools/ci/check-trip-isolation.ts",
+      "sha256": "a1e54c9b5b8687c719882ada6bb84c31087921e2cb93ae151da3bcb53e424c85"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "tools/ci/pack-comment-patterns.b64",
+      "sourceBlob": "4ebee05dcd45bcc8e35bef40a8a41e8be993790a",
+      "destinationPath": "tools/ci/pack-comment-patterns.b64",
+      "sha256": "9361473db5a12ad8630ac3237500e3b684724d6b9dc4a67c2ba283c439bd5d39"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "tools/ci/trip-patterns.b64",
+      "sourceBlob": "6afcfdde62d9ddf2ae91bf95a4236d9fdd036cef",
+      "destinationPath": "tools/ci/trip-patterns.b64",
+      "sha256": "4e0342222a7636c31f5ff83325fc5f8a8c52fc09c9e3a4babb83e4469d0f89c9"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "trips/.gitignore",
+      "sourceBlob": "ef93f399677759c891d65dcbb37c173cf0dbe1ed",
+      "destinationPath": "trips/.gitignore",
+      "sha256": "3eaaec062550238d4ca705a56d85a2b0ac5f62d2c8b1c4561e346f86f756b644"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "trips/README.md",
+      "sourceBlob": "b90e698f680cb30c1a3075a853e8a2aee7ddf06a",
+      "destinationPath": "trips/README.md",
+      "sha256": "1bb0c166816f6b7e298471e5df918ff2daca3a0863074a6f8a632d213cdcd060"
+    },
+    {
+      "sourceRepository": "travel-agent",
+      "sourceCommit": "b5a34de8a53b08ed8ef3abcd4b2c7555a4a11efb",
+      "sourcePath": "tsconfig.json",
+      "sourceBlob": "78497156d691752f9bd8c92349a1a1b4d0dba978",
+      "destinationPath": "tsconfig.json",
+      "sha256": "8b83d4b7d0f7a135185f7db263dd77cc6105c976db19577be85e806d5b60f0f6"
+    }
+  ],
+  "excluded": [
+    {
+      "source": "travel-agent",
+      "path": ".github/dependabot.yml",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "travel-agent",
+      "path": ".github/workflows/ci.yml",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "travel-agent",
+      "path": ".github/workflows/context-hygiene.yml",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "travel-agent",
+      "path": ".github/workflows/trip-hygiene.yml",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "travel-agent",
+      "path": "AGENTS.md",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "travel-agent",
+      "path": "CLAUDE.md",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "travel-agent",
+      "path": "README.md",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "travel-agent",
+      "path": "project.v1.yaml",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    }
+  ],
+  "status": "Source imported and locally tested; no publication or deployment performed.",
+  "adaptations": [
+    {
+      "path": ".gitignore",
+      "sourceSha256": "1f05cd60e545c721524d69f4c73a13b16088a20852829b13ddc392a68951611e",
+      "currentSha256": "a2d409ab6d311f9ddb5d78d6d4fb5286df6a1d4ec8cbbfa11ad755d5671bb816",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "REUSE.toml",
+      "sourceSha256": "371d0a6ee93666353dda2d6528b25c552ea04a31f76cd14a5eb847f629f71dba",
+      "currentSha256": "dba15aeadf7074814780c6fca6fdabe37e13380b4af7f13afb7eca477b5ed786",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "bun.lock",
+      "sourceSha256": "329feb2092582f271fb0b291d3cfeacb6bebea75fc728cdb79d3e09f8aab1917",
+      "currentSha256": "44ded9dba4875636e7f9853595f49ff2d4434b4477e549e8e22a2907370bffa0",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "package.json",
+      "sourceSha256": "5c9ea9091a658f3979c2b101c49e32d6f8b2c809407913f849cbfa3513f06557",
+      "currentSha256": "464fd5a6eec9799bcbc29acae427df2b5fbfb29c1b7e1e05078d4c66b58cd012",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    }
+  ]
+}

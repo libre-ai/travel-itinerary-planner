@@ -1,0 +1,57 @@
+{
+  "name": "@libre-ai/travel-agent",
+  "version": "0.1.0",
+  "description": "Itinerary planner reasoning over verified, sourced facts \u2014 the model composes, the code vetoes. Trip instances never leave the traveller's machine.",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "keywords": [
+    "libre-ai",
+    "travel",
+    "itinerary",
+    "open-data",
+    "privacy"
+  ],
+  "homepage": "https://libre-ai.fr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/libre-ai/travel-itinerary-planner.git"
+  },
+  "engines": {
+    "bun": ">=1.4.0"
+  },
+  "scripts": {
+    "check:bun:runtime": "bun node_modules/@libre-ai/governance/tools/quality/check-bun-minimum.ts",
+    "check:bun": "bun run check:bun:runtime && bun node_modules/@libre-ai/governance/tools/quality/check-bun-manifests.ts",
+    "check:toolchain": "bun run check:bun && bun node_modules/@libre-ai/governance/tools/quality/check-toolchain.ts",
+    "check:secret-scan": "bun run check:bun:runtime && bun node_modules/@libre-ai/governance/tools/quality/check-secret-scan.ts",
+    "check:trip-isolation": "bun run check:bun:runtime && bun tools/ci/check-trip-isolation.ts",
+    "lint": "bun run check:bun:runtime && biome ci .",
+    "typecheck": "bun run check:bun:runtime && tsc --noEmit -p tsconfig.json",
+    "pretest": "bun run check:bun",
+    "test": "bun test",
+    "check:local": "bun run check:bun:runtime && bun run check:trip-isolation && bun run lint && bun run typecheck && bun run test",
+    "check": "bun run check:bun && bun run check:toolchain && bun run check:secret-scan && bun run check:local"
+  },
+  "packageManager": "bun@1.4.0-canary.1",
+  "devDependencies": {
+    "@libre-ai/governance": "file:../project-governance",
+    "@biomejs/biome": "2.5.3",
+    "@types/bun": "1.3.14",
+    "typescript": "7.0.2"
+  },
+  "overrides": {
+    "fast-uri": "4.1.4",
+    "@libre-ai/governance": "file:../project-governance",
+    "@libre-ai/contracts-authority": "file:../schemas-and-contracts",
+    "@libre-ai/contracts": "file:../schemas-and-contracts/packages/sdk-ts",
+    "@libre-ai/envelope": "file:../schemas-and-contracts/packages/envelope",
+    "@libre-ai/ui": "file:../application-development-toolkit/packages/ui",
+    "@libre-ai/web-platform": "file:../application-development-toolkit/packages/web-platform",
+    "@libre-ai/testing": "file:../application-development-toolkit/packages/testing",
+    "@libre-ai/data": "file:../organization-data-lifecycle/packages/data",
+    "@libre-ai/rgpd-kit": "file:../organization-data-lifecycle/packages/rgpd-kit",
+    "@libre-ai/policy-core-ref": "file:../ai-model-policy/packages/policy-core-ref",
+    "@libre-ai/auth-web": "file:../ai-work-supervision/packages/auth-web"
+  }
+}

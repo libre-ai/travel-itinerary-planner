@@ -1,0 +1,18 @@
+# Phrases that must never appear in a *city pack comment*, base64-encoded.
+#
+# Distinct from trip-patterns.b64, and the distinction matters. Those are
+# literal fragments of an instance — a date, a party size — and are forbidden
+# everywhere. These are ordinary domain vocabulary: prose in AGENTS.md, in the
+# specs, and in this very toolchain has to talk about a stay window in order to
+# forbid it. Applying them globally produced ten false positives on the first
+# run and would have taught the next contributor to bypass the gate.
+#
+# A pack describes a city. The moment one of its comments ties that city to
+# somebody's stay, the calendar stops being a public fact and becomes a
+# signature.
+
+c3RheSB3aW5kb3c=
+b3VyIHN0YXk=
+dGhlIHRyaXAgd2luZG93
+ZmVuw6p0cmUgZGUgc8Opam91cg==
+bm90cmUgc8Opam91cg==

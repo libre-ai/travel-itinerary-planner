@@ -1,0 +1,20 @@
+# Literal fragments of a known trip instance, base64-encoded.
+#
+# Obfuscation, not encryption — the same device the fleet's context-hygiene gate
+# uses. The goal is that this repository contains zero readable mention of a
+# stay window: a gate that grepped for "2026-08-13" in clear text would publish
+# the very date it protects, and would do so in the file everyone reads first.
+#
+# One encoded fragment per line. Blank lines and lines starting with '#' are
+# ignored. Matching is case-insensitive and applies to every tracked text file.
+#
+# Add a fragment here when a new instance is planned; never remove one, since a
+# past stay window still discloses a past absence.
+
+MjAyNi0wOC0xMw==
+MjAyNi0wOC0yNw==
+MTMg4oaSIDI3
+MTMtMjcgYW/Du3Q=
+MiBhZHVsdGVz
+MTQgbnVpdHM=
+dHdvIGFkdWx0cw==
