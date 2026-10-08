@@ -17,4 +17,18 @@ The intended itineraries do not include reservations or payments.
 
 **Today:** the repository contains reference data, a design and trip-isolation checks; it does not yet contain an itinerary application.
 
+## Project status
+
+<!-- libre-ai:project-status:begin -->
+<!-- Section générée depuis project.v1.yaml — ne pas éditer à la main. -->
+
+- Situation actuelle : Recovered source snapshot d3e164cf01ebaebb4d1ad9f9cd393c72994cf6ad is present. Product tests and CI were not rerun for this documentary integration; historical evidence is not qualification of this tree. No product admission or authority transfer is established. Historical responsibilities were held by libre-ai/travel-agent, a repository since retired.
+- Maturité : idea
+- Exposition : idea
+- Confiance : medium
+- Preuves vérifiées le : 2026-10-08
+- Avancement : Avancement non calculable — périmètre à clarifier
+
+<!-- libre-ai:project-status:end -->
+
 [Catalogue](https://github.com/libre-ai/.github/blob/main/profile/README.md) · [Contribute](https://github.com/libre-ai/.github/blob/main/CONTRIBUTING.md) · [Français](README.fr.md) · [CC BY 4.0 license](LICENSES/CC-BY-4.0.txt)

@@ -1,0 +1,57 @@
+# Project state card — the state authority since ADR-0020 (design §6.2).
+# The README status section is generated from this card (sentinels).
+schema_version: libre-ai.project.v1
+project: travel-itinerary-planner
+repository: libre-ai/travel-itinerary-planner
+kind: product
+layer: couche-1
+statement:
+  for: "contributors assessing and developing this project's intended uses"
+  who_faces: "recovered sources whose current integrated behavior still requires verification"
+  enables: "inspecting the recovered implementation and running its declared checks before admission"
+  producing:
+    - "reproducible qualification evidence for the intended scope"
+  without_depending_on:
+    - "an implicit transfer of historical authority or an assumed passing CI run"
+summary: "travel-itinerary-planner: recovered sources with documentary integration under review."
+current_situation: >-
+  Recovered source snapshot d3e164cf01ebaebb4d1ad9f9cd393c72994cf6ad is present.
+  Product tests and CI were not rerun for this documentary integration; historical
+  evidence is not qualification of this tree. No product admission or authority
+  transfer is established. Historical responsibilities were held by
+  libre-ai/travel-agent, a repository since retired.
+scope:
+  - "Describe your travel constraints and the activities you are considering."
+  - "Compare a proposed itinerary with the destination facts that support it."
+  - "Spot missing or outdated information and adjust the plan before your trip."
+non_goals:
+  - "Claiming operational readiness merely from the presence of recovered code."
+  - "Transferring historical authority or consumers without separate reviewed admission."
+dependencies:
+  - on: libre-ai/project-governance
+    why: "Current fleet doctrine and reusable verification workflows."
+    pinned: "github:libre-ai/project-governance#2024a4884b314df99be457618be9c3b48a0287f7"
+maturity: idea
+confidence: medium
+exposure: idea
+freshness:
+  last_verified_on: 2026-10-08
+scope_stability: unstable
+phases:
+  - id: admission
+    title: "Bounded capability admission"
+    note: "Recovered code is present. Documentary checks do not accept product qualification criteria."
+    exit_criteria:
+      - id: qualified-scope
+        text: "A bounded city dataset must have reviewed provenance and sufficient usable facts for a complete itinerary. A runnable journey must demonstrate constraint checks and rejection of expired or missing required information. Independent tests must verify what leaves the local environment, export behavior and the separation of private trip details from destination data. The exact implementation and evidence must be reviewed before any capability is labeled available."
+        weight: 1
+        status: pending
+hypothesis: "The intended uses described in README.md can support a useful bounded product once their activation criteria are independently qualified."
+evidence_required:
+  - "A bounded city dataset must have reviewed provenance and sufficient usable facts for a complete itinerary. A runnable journey must demonstrate constraint checks and rejection of expired or missing required information. Independent tests must verify what leaves the local environment, export behavior and the separation of private trip details from destination data. The exact implementation and evidence must be reviewed before any capability is labeled available."
+promotion_criteria:
+  - to: spec-published
+    when: "A bounded specification and its acceptance criteria are reviewed and explicitly admitted."
+kill_predicates: []
+benchmark:
+  none: "No benchmark was executed for this integrated tree."
